@@ -1,15 +1,15 @@
 plugins {
     application
-    kotlin("jvm") version "1.3.71"
+    kotlin("jvm") version "1.4.21"
     id("com.justai.jaicf.jaicp-build-plugin") version "0.1.1"
 }
 
 group = "com.justai.jaicf"
 version = "1.0.0"
 
-val jaicf = "0.8.1"
+val jaicf = "1.1.3"
 val logback = "1.2.3"
-val ktor = "1.3.1"
+val ktor = "1.5.1"
 
 // Main class to run application on JAICP Cloud. Either JaicpPollerKt, or JaicpServerKt. Will propagate to .jar main class.
 application {
@@ -28,10 +28,10 @@ dependencies {
 
     implementation("ch.qos.logback:logback-classic:$logback")
 
-    implementation("com.justai.jaicf:core:$jaicf")
-    implementation("com.justai.jaicf:mongo:$jaicf")
-    implementation("com.justai.jaicf:jaicp:$jaicf")
-    implementation("com.justai.jaicf:caila:$jaicf")
+    implementation("com.just-ai.jaicf:core:$jaicf")
+    implementation("com.just-ai.jaicf:mongo:$jaicf")
+    implementation("com.just-ai.jaicf:jaicp:$jaicf")
+    implementation("com.just-ai.jaicf:caila:$jaicf")
 }
 
 tasks {
